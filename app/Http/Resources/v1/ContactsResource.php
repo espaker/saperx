@@ -20,7 +20,7 @@ class ContactsResource extends JsonResource
             'email' => $this->email,
             'birthday' => $this->birthday,
             'document' => $this->document,
-            'phones' => $this->phones,
+            'phones' => json_decode($this->phones),
         ];
     }
 }

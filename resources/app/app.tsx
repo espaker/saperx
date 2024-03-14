@@ -22,13 +22,13 @@ const App = () => {
             render: data => dayjs(data).format('DD/MM/YYYY')
         },
         { title: 'CPF', dataIndex: 'document', key: 'document' },
-        { 
-            title: 'Ações', dataIndex: 'actions', key: 'actions',
-            render: (_, record) => <>
-                <Button size="small" type="default" icon={<EditOutlined />} >Editar</Button>
-                <Button size="small" danger type="default" icon={<DeleteOutlined />} >Apagar</Button>
-            </>
-        }
+        // { 
+        //     title: 'Ações', dataIndex: 'actions', key: 'actions',
+        //     render: (_, record) => <>
+        //         <Button size="small" type="default" icon={<EditOutlined />} >Editar</Button>
+        //         <Button size="small" danger type="default" icon={<DeleteOutlined />} >Apagar</Button>
+        //     </>
+        // }
     ], [])
     
     const getData = useCallback(async () => {
@@ -46,7 +46,7 @@ const App = () => {
   return (
     <Card 
         title={'Contatos'}
-        extra={<Button type="primary" icon={<UserAddOutlined />}>Novo</Button>}
+        // extra={<Button type="primary" icon={<UserAddOutlined />}>Novo</Button>}
     >
         <Table 
             dataSource={data} 
